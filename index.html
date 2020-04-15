@@ -9,6 +9,10 @@
       var hour = d.getHours();
       console.log(day);
       console.log(hour);
+      var mannyDay = Math.floor((day*24 + hour)/14);
+      var mannyHour = (day*24 + hour)%14;
+      console.log(mannyDay);
+      console.log(mannyHour);
   </script>
   
   </body>
