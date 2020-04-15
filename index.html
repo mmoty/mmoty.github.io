@@ -2,7 +2,8 @@
 
 <body>
 <p1>Menny's wired time system is frikish</p1>
-  <p id-"isMannyUp"></p>
+  <p id="isMannyUp"></p>
+  <p id="mannysDate"></p>
     <script>
       var d = new Date();
       var day = d.getDay();
@@ -13,6 +14,13 @@
       var mannyHour = (day*24 + hour)%14;
       console.log(mannyDay);
       console.log(mannyHour);
+      if (mannyHour < 11)
+        document.getElementById("isMannyUp").innerHTML = "yes";
+      else
+        document.getElementById("isMannyUp").innerHTML = "no";
+      var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","sexDay","NO_SEX_DAY","1","2","3"];
+      document.getElementById("isMannyUp").innerHTML = "day: " + days[mannyDay] + " hour: " + mannyHour;
+      
   </script>
   
   </body>
