@@ -4,8 +4,9 @@
 <p1>Menny's wired time system is frikish</p1>
   <p id-"isMannyUp"></p>
     <script>
-      var day = getDay();
-      var hour = getHours();
+      var d = new Date();
+      var day = d.getDay();
+      var hour = d.getHours();
       console.log(day);
       console.log(hour);
   </script>
